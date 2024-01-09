@@ -32,17 +32,18 @@ html,body{
 }
 
 #workingarea{
+    pointer-events: none;
     position: relative;
     margin: 0 auto;
     width: 100%;
     height: 100vh;
     max-width: 80%;
     /* background-color: #888; */
-    border: 1px solid red;
-
+    /* border: 1px solid red; */
 }
 
 #nav{
+    pointer-events: all;
     display: flex;
     align-items: center;
     width: 100%;
@@ -82,17 +83,63 @@ html,body{
     /* height: 100px; */
     width: 100%;
     transform: translate(0%, -50%);
-    background-color: green;
+    /* background-color: green; */
 }
 
 #heroleft{
     /* height: 100px; */
     min-width: 50%;
-    background-color: red;
+    /* background-color: red; */
+}
+
+#heroleft button{
+    pointer-events: all;
+    padding: 20px 20px;
+    font-size: 2vw;
+    font-family: "kajiro";
+}
+
+#heroleft .elem{
+    height: 9vw;
+    overflow: hidden;
+    /* background-color: red; */
+}
+
+#heroleft .elem h1{
+    line-height: .9;
+    font-family: "kajiro";
+    color: #fff;
+    font-weight: 100;
+    font-size: 11vw;
 }
 
 #heroright{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     /* height: 100px; */
-    min-width: 25%;
-    background-color: yellow;
+    width: 25%;
+    /* background-color: green; */
+}
+
+#heroright #imagediv{
+    margin-top: 10px;
+    height: 200px;
+    width: 100%;
+    background-color: red;
+    background-image: url(https://images.unsplash.com/photo-1704551291212-332cad801af3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyOXx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+
+#heroright p:nth-child(3){
+    /* color: red; */
+    margin-bottom: 60px;
+    margin-top: 10px;
+}
+
+#heroright p{
+    font-size: 14px;
+    color: #fff;
+    text-align: right;
 }
